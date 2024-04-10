@@ -1,0 +1,14 @@
+# Core Dependencies
+Django
+
+# Django Packages
+djangorestframework
+python-dotenv
+django-redis
+redis
+
+# Other Packages
+requests
+
+# Development and Testing
+pytest
