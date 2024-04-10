@@ -33,6 +33,10 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 
+# Custom User model
+AUTH_USER_MODEL = 'account.CustomUser'
+
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -43,6 +47,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'account'
 ]
 
 MIDDLEWARE = [
@@ -198,3 +203,7 @@ LOGGING = {
         },
     },
 }
+
+
+# Email settings (would be replaced with SMTP settings for production)
+EMAIL_BACKEND = os.getenv('EMAIL_BACKEND', 'django.core.mail.backends.console.EmailBackend')
